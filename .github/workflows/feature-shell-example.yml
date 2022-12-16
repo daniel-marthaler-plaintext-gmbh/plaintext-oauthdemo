@@ -19,5 +19,6 @@ jobs:
       run: |
         echo "Hello World ${{ secrets.DEMO_DEV }}" ; ls -la ; pwd ; echo $DAY_OF_WEEK > test.txt ; cat test.txt
         - name: Hello world
-      run2: |
+    - name: nr2
+      run: |
         echo "Hello 2  ${{ env.DAY_OF_WEEK }}"
