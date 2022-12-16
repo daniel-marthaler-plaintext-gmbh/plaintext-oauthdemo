@@ -4,6 +4,9 @@ on:
   push:
     branches: [ "feature/test*" ]
 
+env:
+  DAY_OF_WEEK: Monday
+
 jobs:
 
   build:
@@ -14,4 +17,4 @@ jobs:
     - uses: actions/checkout@v3
     - name: Hello world
       run: |
-        echo "Hello World ${{ secrets.DEMO_DEV }}" ; ls -la ; pwd ; echo ${{ secrets.DEMO_DEV }} > test.txt ; cat test.txt
+        echo "Hello World ${{ secrets.DEMO_DEV }}" ; ls -la ; pwd ; echo $DAY_OF_WEEK > test.txt ; cat test.txt
