@@ -1,0 +1,19 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "feature2/test2" ]
+
+env:
+  EXAMPLE1: example1
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: step-nr-01
+      run: |
+        echo "Hello 2  ${{ env.EXAMPLE1 }}"
