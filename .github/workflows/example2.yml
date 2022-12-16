@@ -5,7 +5,7 @@ on:
     branches: [ "feature2/test2" ]
 
 env:
-  EXAMPLE2: example22
+  EXAMPLE2: example2
 
 jobs:
 
