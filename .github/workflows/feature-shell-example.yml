@@ -2,7 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "feature/test*" ]
+    branches: [ "feature2/test2" ]
 
 env:
   DAY_OF_WEEK: Monday
@@ -14,11 +14,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Hello world
-      run: |
-        echo "Hello World ${{ secrets.DEMO_DEV }}" ; ls -la ; pwd ; echo $DAY_OF_WEEK > test.txt ; cat test.txt
-        - name: Hello world
-    - name: nr2
+    - name: step-nr-01
       run: |
         echo "Hello 2  ${{ env.DAY_OF_WEEK }}"
